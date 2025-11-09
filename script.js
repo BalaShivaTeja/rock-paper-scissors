@@ -1,20 +1,20 @@
 function play(userChoice) {
     const choices = ['rock', 'paper', 'scissors'];
-    const computerChoice = choices[Math.floor(Math.random() * 3)];
+    const TejaChoice = choices[Math.floor(Math.random() * 3)];
     
     let result = '';
     
-    if (userChoice === computerChoice) {
+    if (userChoice === TejaChoice) {
         result = "It's a tie!";
     } else if (
-        (userChoice === 'rock' && computerChoice === 'scissors') ||
-        (userChoice === 'paper' && computerChoice === 'rock') ||
-        (userChoice === 'scissors' && computerChoice === 'paper')
+        (userChoice === 'rock' && TejaChoice === 'scissors') ||
+        (userChoice === 'paper' && TejaChoice === 'rock') ||
+        (userChoice === 'scissors' && TejaChoice === 'paper')
     ) {
         result = "You win!";
     } else {
         result = "You lose!";
     }
     
-    document.getElementById('result').innerText = `Computer chose ${computerChoice}. ${result}`;
+    document.getElementById('result').innerText = `Teja chose ${TejaChoice}. ${result}`;
 }
